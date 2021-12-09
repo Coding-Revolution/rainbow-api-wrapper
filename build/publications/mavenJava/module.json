@@ -1,0 +1,144 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "it.necross",
+    "module": "RainbowWrapper",
+    "version": "0.2.0-rc",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 16,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.6.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "RainbowWrapper-0.2.0-rc.jar",
+          "url": "RainbowWrapper-0.2.0-rc.jar",
+          "size": 56601,
+          "sha512": "879413dd91bdcc50afd0c5decdb37b345b66a9ba1949bfd3b068b251fda4112502d601572f2d4dff77f6da6f2a38aefd739ad66f887f2c5887c6f084fa6ffd0b",
+          "sha256": "0c89d27a4f7554e9a8967da1afa381ad1079d2dbc9b4026915e326c6aeee8644",
+          "sha1": "aa9bf0bf10d3ae8bb17e0dc330f7c896211cc8d9",
+          "md5": "75e4c449772b355d2fe6fe605a16308a"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 16,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.google.code.gson",
+          "module": "gson",
+          "version": {
+            "requires": "2.8.9"
+          }
+        },
+        {
+          "group": "com.squareup.okhttp3",
+          "module": "okhttp",
+          "version": {
+            "requires": "3.12.12"
+          }
+        },
+        {
+          "group": "org.slf4j",
+          "module": "slf4j-api",
+          "version": {
+            "requires": "2.0.0-alpha4"
+          }
+        },
+        {
+          "group": "org.javacord",
+          "module": "javacord",
+          "version": {
+            "requires": "3.3.2"
+          }
+        },
+        {
+          "group": "io.socket",
+          "module": "socket.io-client",
+          "version": {
+            "requires": "2.0.1"
+          }
+        },
+        {
+          "group": "net.oneandone.reflections8",
+          "module": "reflections8",
+          "version": {
+            "requires": "0.11.7"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.6.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "RainbowWrapper-0.2.0-rc.jar",
+          "url": "RainbowWrapper-0.2.0-rc.jar",
+          "size": 56601,
+          "sha512": "879413dd91bdcc50afd0c5decdb37b345b66a9ba1949bfd3b068b251fda4112502d601572f2d4dff77f6da6f2a38aefd739ad66f887f2c5887c6f084fa6ffd0b",
+          "sha256": "0c89d27a4f7554e9a8967da1afa381ad1079d2dbc9b4026915e326c6aeee8644",
+          "sha1": "aa9bf0bf10d3ae8bb17e0dc330f7c896211cc8d9",
+          "md5": "75e4c449772b355d2fe6fe605a16308a"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "RainbowWrapper-0.2.0-rc-sources.jar",
+          "url": "RainbowWrapper-0.2.0-rc-sources.jar",
+          "size": 12035,
+          "sha512": "d6196df1a9c631036f9e1cd96b6b25cde184e73d753db87de2312e1cbde02410694f9d6fc518271db89215f672392ca92e4e3083208ba2e973bedb7ced6bab78",
+          "sha256": "9f623b030efb2b9aafc72cce682c015dc4b229c9bfae4ef6db611137c5a390b4",
+          "sha1": "656800505862ec5ab55c2561d3d1f41bf72019b0",
+          "md5": "c77aaaacce43cb040a32c226ba1c1b20"
+        }
+      ]
+    }
+  ]
+}

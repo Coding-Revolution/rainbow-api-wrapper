@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- This module was also published with a richer model, Gradle metadata,  -->
+  <!-- which should be used instead. Do not delete the following line which  -->
+  <!-- is to indicate to Gradle or any Gradle module metadata file consumer  -->
+  <!-- that they should prefer consuming it instead. -->
+  <!-- do_not_remove: published-with-gradle-metadata -->
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>it.necross</groupId>
+  <artifactId>RainbowWrapper</artifactId>
+  <version>0.2.0-rc</version>
+  <name>Rainbow Six Siege Kotlin Wrapper</name>
+  <description>Wrapper representation the rainbow six siege api</description>
+  <url>https://necross.it</url>
+  <developers>
+    <developer>
+      <id>CerberusIT</id>
+      <name>Kelvin Bill</name>
+      <email>kelvin.bill@necross.it</email>
+    </developer>
+  </developers>
+  <dependencies>
+    <dependency>
+      <groupId>org.jetbrains.kotlin</groupId>
+      <artifactId>kotlin-stdlib-jdk8</artifactId>
+      <version>1.6.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.google.code.gson</groupId>
+      <artifactId>gson</artifactId>
+      <version>2.8.9</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.squareup.okhttp3</groupId>
+      <artifactId>okhttp</artifactId>
+      <version>3.12.12</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>2.0.0-alpha4</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.javacord</groupId>
+      <artifactId>javacord-api</artifactId>
+      <version>3.3.2</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.socket</groupId>
+      <artifactId>socket.io-client</artifactId>
+      <version>2.0.1</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>net.oneandone.reflections8</groupId>
+      <artifactId>reflections8</artifactId>
+      <version>0.11.7</version>
+      <scope>runtime</scope>
+    </dependency>
+  </dependencies>
+</project>
