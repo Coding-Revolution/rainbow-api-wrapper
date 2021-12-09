@@ -22,7 +22,7 @@ class RainbowWrapper(private val apiKey: String) {
 
     var rankService = RankService(connectionBuilder)
 
-        init {
+    init {
         logger.info("Initializing connection builder")
     }
 
