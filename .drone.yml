@@ -4,7 +4,7 @@ name: Rainbow Six Siege Kotlin Wrapper
 
 steps:
   - name: "Build"
-    image: gradle:jdk17
+    image: gradle:jdk16
     commands:
       - gradle build
 
@@ -50,7 +50,7 @@ steps:
       - echo "Successfully authenticated to Nexus"
 
   - name: "Deploy"
-    image: gradle:jdk17
+    image: gradle:jdk16
     environment: *default_environment
     commands:
       - gradle publish -PnexusUsername=$NEXUS_USERNAME -PnexusPassword=$NEXUS_PASSWORD -PnexusRepoId=$REPO_ID -PnexusRepoUsername=$REPO_USERNAME -PnexusRepoPassword=$REPO_PASSWORD
