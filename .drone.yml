@@ -1,0 +1,57 @@
+kind: pipeline
+type: docker
+name: Melion Kotlin Wrapper CI
+
+steps:
+  - name: "Build"
+    image: gradle:jdk17
+    commands:
+      - gradle build
+
+  - name: "Publish"
+    image: robertstettner/drone-mvn-auth
+    pull: true
+    environment: &default_environment
+      NEXUS_USERNAME:
+        from_secret: NEXUS_USERNAME
+      NEXUS_PASSWORD:
+        from_secret: NEXUS_PASSWORD
+      REPO_ID:
+        from_secret: REPO_ID
+    servers:
+      - id: snapshot
+        username: $NEXUS_USERNAME
+        password: $NEXUS_PASSWORD
+      - id: revolution-nexus
+        username: $NEXUS_USERNAME
+        password: $NEXUS_PASSWORD
+    settings:
+      servers:
+        from_secret: $NEXUS_USERNAME
+    profiles:
+      - id: revolution-nexus
+        repositories:
+          - id: central
+            name: Repository for my libraries
+            url: https://nexus.coding-revolution.com/repository/maven-public/
+        plugin_repositories:
+          - id: central
+            name: Repository for my libraries
+            url: https://nexus.coding-revolution.com/repository/maven-public/
+            layout: default
+    active_profiles:
+      - revolution-nexus
+    debug: true
+    commands:
+      - echo 'Username '$NEXUS_USERNAME
+      - echo 'Password '$NEXUS_PASSWORD
+      - echo '<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd"><servers><server><id>'$REPO_ID'</id><username>'$REPO_USERNAME'</username><password>'$REPO_PASSWORD'</password></server></servers></settings>' > settings.xml
+      - ls
+      - echo "Successfully authenticated to Nexus"
+
+  - name: "Deploy"
+    image: gradle:jdk17
+    environment: *default_environment
+    commands:
+      - gradle publish -PnexusUsername=$NEXUS_USERNAME -PnexusPassword=$NEXUS_PASSWORD -PnexusRepoId=$REPO_ID -PnexusRepoUsername=$REPO_USERNAME -PnexusRepoPassword=$REPO_PASSWORD
+      - echo "Successfully deployed to Nexus"
