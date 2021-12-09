@@ -26,9 +26,16 @@ fun main(args: Array<String>) {
         println(this.pvp.general)
     }
 
+    wrapper.userNameService.getUserName(GamePlatform.UPLAY, userId).apply {
+        println(this.idOnPlatform)
+        println(this.platform.identifier)
+        println(this.avatar.high)
+    }
+
+    /**
     wrapper.rankService.getRanksByUserName(GamePlatform.UPLAY, userName).apply {
         this.seasons.forEach {
             println(it.id)
         }
-    }
+    }**/
 }
