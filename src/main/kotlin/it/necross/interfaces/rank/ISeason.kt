@@ -1,5 +1,10 @@
 package it.necross.interfaces.rank
 
-import com.google.gson.annotations.SerializedName
-
-data class ISeason(val id: String, val seasonInformation: ISeasonInfo)
+data class ISeason(
+    val seasonId: Int,
+    val seasonName: String,
+    val seasonColor: String,
+    val seasonImage: String,
+    val seasonReleaseDate: String,
+    val regions: IRegions
+)

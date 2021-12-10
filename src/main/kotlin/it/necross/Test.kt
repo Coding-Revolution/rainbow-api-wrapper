@@ -35,10 +35,9 @@ fun main(args: Array<String>) {
     wrapper.statsService.getStatsById(GamePlatform.UPLAY, userId).apply {
         println("Kills with ash: ${this.pvp.operators.ash.kills}")
     }
-    /**
-    wrapper.rankService.getRanksByUserName(GamePlatform.UPLAY, userName).apply {
-        this.seasons.forEach {
-            println(it.id)
-        }
-    }**/
+
+
+    wrapper.rankService.getRanksByUserName(GamePlatform.UPLAY, "vMX.").apply {
+        println(this.seasons.season23.regions.emea.boards.pvp_ranked.current.name)
+    }
 }
