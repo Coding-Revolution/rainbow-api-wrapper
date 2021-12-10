@@ -1,4 +1,4 @@
-package it.necross.interfaces.stats.general
+package it.necross.interfaces.stats
 
 data class IStatsGeneral(val bulletsFired: Int, val bulletsConnected: Int, val kills: Int, val deaths: Int, val kd: Double, val assists: Int,
                          val headshots: Int, val meleeKills: Int, val blindKills: Int, val penetrationKills: Int, val dbno: Int, val dbnoAssists: Int,

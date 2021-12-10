@@ -1,4 +1,4 @@
-package it.necross.interfaces.stats.general
+package it.necross.interfaces.stats
 
 import it.necross.interfaces.stats.pve.IPvE
 import it.necross.interfaces.stats.pvp.IPvP
