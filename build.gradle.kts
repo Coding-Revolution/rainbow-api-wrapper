@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "it.necross"
-version = "0.2.0"
+version = "1.0.0"
 val projectVersion = project.version
 
 if (project.hasProperty("publish.snapshot")) {
