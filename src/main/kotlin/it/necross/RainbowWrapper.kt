@@ -24,6 +24,8 @@ class RainbowWrapper(private val apiKey: String) {
 
     var userNameService = UsernameService(connectionBuilder)
 
+    var statsService = StatsService(connectionBuilder)
+
     init {
         logger.info("Initializing connection builder")
     }
