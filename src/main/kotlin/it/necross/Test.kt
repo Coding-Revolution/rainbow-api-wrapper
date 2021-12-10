@@ -32,7 +32,9 @@ fun main(args: Array<String>) {
         println(this.avatar.high)
     }
 
-    wrapper.
+    wrapper.statsService.getStatsById(GamePlatform.UPLAY, userId).apply {
+        println("Kills with ash: ${this.pvp.operators.ash.kills}")
+    }
     /**
     wrapper.rankService.getRanksByUserName(GamePlatform.UPLAY, userName).apply {
         this.seasons.forEach {
