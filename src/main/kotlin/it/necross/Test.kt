@@ -32,6 +32,7 @@ fun main(args: Array<String>) {
         println(this.avatar.high)
     }
 
+    wrapper.
     /**
     wrapper.rankService.getRanksByUserName(GamePlatform.UPLAY, userName).apply {
         this.seasons.forEach {
