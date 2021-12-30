@@ -38,5 +38,7 @@ data class ISeasons(
     @SerializedName("22")
     val season22: ISeason,
     @SerializedName("23")
-    val season23: ISeason
+    val season23: ISeason,
+    @SerializedName("24")
+    val season24: ISeason,
 )

@@ -10,7 +10,7 @@ import it.necross.util.Data
 class UsernameService(private val connectionBuilder: ConnectionBuilder) {
 
     fun getUserName(platform: GamePlatform, userId: String): IUsername {
-        val result = connectionBuilder.makeRequest("${Data.apiUrl}/${platform.identifier}/username/$userId", RestType.GET)
+        val result = connectionBuilder.makeRequest("${Data.apiUrl}/user/${platform.identifier}/id/$userId", RestType.GET)
         val jsonData: String = result.body()!!.string()
 
         return RainbowWrapper.gson.fromJson(jsonData, IUsername::class.java)

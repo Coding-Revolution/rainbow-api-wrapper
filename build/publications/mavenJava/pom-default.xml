@@ -8,7 +8,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>it.necross</groupId>
   <artifactId>RainbowWrapper</artifactId>
-  <version>0.2.0-rc</version>
+  <version>1.0.1-rc</version>
   <name>Rainbow Six Siege Kotlin Wrapper</name>
   <description>Wrapper representation the rainbow six siege api</description>
   <url>https://necross.it</url>

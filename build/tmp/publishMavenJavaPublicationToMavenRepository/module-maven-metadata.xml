@@ -3,12 +3,14 @@
   <groupId>it.necross</groupId>
   <artifactId>RainbowWrapper</artifactId>
   <versioning>
-    <latest>0.2.0-rc</latest>
-    <release>0.2.0-rc</release>
+    <latest>1.0.1-rc</latest>
+    <release>1.0.1-rc</release>
     <versions>
       <version>0.1.0-rc</version>
       <version>0.2.0-rc</version>
+      <version>1.0.0-rc</version>
+      <version>1.0.1-rc</version>
     </versions>
-    <lastUpdated>20211209211025</lastUpdated>
+    <lastUpdated>20211229110042</lastUpdated>
   </versioning>
 </metadata>

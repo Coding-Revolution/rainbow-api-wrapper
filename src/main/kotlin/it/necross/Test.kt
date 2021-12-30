@@ -38,6 +38,6 @@ fun main(args: Array<String>) {
 
 
     wrapper.rankService.getRanksByUserName(GamePlatform.UPLAY, "vMX.").apply {
-        println(this.seasons.season23.regions.emea.boards.pvp_ranked.current.name)
+        println(this.seasons.season24.regions.emea.boards.pvp_ranked.current.name)
     }
 }

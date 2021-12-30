@@ -22,4 +22,5 @@ class LevelService(private val connectionBuilder: ConnectionBuilder) {
 
         return RainbowWrapper.gson.fromJson(jsonData, Level::class.java)
     }
+
 }
