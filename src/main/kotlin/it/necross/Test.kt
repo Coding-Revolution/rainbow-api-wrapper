@@ -40,4 +40,10 @@ fun main(args: Array<String>) {
     wrapper.rankService.getRanksByUserName(GamePlatform.UPLAY, "vMX.").apply {
         println(this.seasons.season24.regions.emea.boards.pvp_ranked.current.name)
     }
+
+    wrapper.userNameService.userInformationByName(GamePlatform.UPLAY, "vMX.").apply {
+        println(this.idOnPlatform)
+        println(this.platform.identifier)
+        println(this.avatar.high)
+    }
 }

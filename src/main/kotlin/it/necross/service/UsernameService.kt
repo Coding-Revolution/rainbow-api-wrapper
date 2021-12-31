@@ -15,4 +15,10 @@ class UsernameService(private val connectionBuilder: ConnectionBuilder) {
 
         return RainbowWrapper.gson.fromJson(jsonData, IUsername::class.java)
     }
+
+    fun userInformationByName(platform: GamePlatform, username: String): IUsername {
+        val userId = UserIdService(connectionBuilder).getUserID(platform, username)
+
+        return this.getUserName(platform, userId.id)
+    }
 }
