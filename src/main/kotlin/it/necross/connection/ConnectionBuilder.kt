@@ -4,6 +4,8 @@ import com.google.gson.Gson
 import it.necross.enums.RestType
 import it.necross.interfaces.connection.RestBodyInterface
 import okhttp3.*
+import okhttp3.MediaType.Companion.toMediaTypeOrNull
+import okhttp3.RequestBody.Companion.toRequestBody
 
 class ConnectionBuilder(private val apiKey: String) {
 
@@ -20,18 +22,10 @@ class ConnectionBuilder(private val apiKey: String) {
     }
 
     private fun generateRequestBody(restBodyInterface: RestBodyInterface): RequestBody {
-        val jsonType = MediaType.parse("application/json; charset=utf-8")
+        val jsonType = "application/json; charset=utf-8".toMediaTypeOrNull()
         val jsonConverter = Gson().toJson(restBodyInterface)
 
-        return RequestBody.create(jsonType, jsonConverter)
-    }
-
-    fun convertResponseToClass(response: Response, target: Class<Any>): Class<Any> {
-        return Gson().fromJson(response.body().toString(), target::class.java);
-    }
-
-    fun convertResToClassArray(response: Response, target: RestBodyInterface): Array<RestBodyInterface> {
-        return Gson().fromJson(response.body().toString(), arrayOf(target)::class.java);
+        return jsonConverter.toRequestBody(jsonType)
     }
 
     fun makeRequestWithBody(url: String, restBody: RestBodyInterface, restType: RestType): Response {
@@ -43,4 +37,19 @@ class ConnectionBuilder(private val apiKey: String) {
 
         return httpClient.newCall(request).execute()
     }
+
+    inline infix fun <reified T : Any> Response.convert(target: Class<T>): T {
+        val responseString = this.body!!.string()
+         return if (code !in 200..201) {
+            //ProcessedResponse(code, null)
+            this.close()
+            println("Es ist ein Fehler aufgetreten. Code: $code")
+            null as T
+        } else {
+            //ProcessedResponse(code, BackendWrapper.gson.fromJson(this.body!!.string(), target))
+            this.close()
+            Gson().fromJson(responseString, target)
+        }
+    }
+
 }

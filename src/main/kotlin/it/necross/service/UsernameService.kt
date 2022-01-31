@@ -11,7 +11,7 @@ class UsernameService(private val connectionBuilder: ConnectionBuilder) {
 
     fun getUserName(platform: GamePlatform, userId: String): IUsername {
         val result = connectionBuilder.makeRequest("${Data.apiUrl}/user/${platform.identifier}/id/$userId", RestType.GET)
-        val jsonData: String = result.body()!!.string()
+        val jsonData: String = result.body!!.string()
 
         return RainbowWrapper.gson.fromJson(jsonData, IUsername::class.java)
     }

@@ -11,7 +11,7 @@ class UserIdService(private val connectionBuilder: ConnectionBuilder) {
 
     fun getUserID(platform: GamePlatform, userName: String): UbisoftId {
         val result = connectionBuilder.makeRequest("${Data.apiUrl}/${platform.identifier}/id/$userName", RestType.GET)
-        val jsonData: String = result.body()!!.string()
+        val jsonData: String = result.body!!.string()
 
         return RainbowWrapper.gson.fromJson(jsonData, UbisoftId::class.java)
     }

@@ -76,8 +76,9 @@ dependencies {
     // https://mvnrepository.com/artifact/com.google.code.gson/gson
     implementation("com.google.code.gson:gson:2.8.9")
 
-    // https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp
-    implementation("com.squareup.okhttp3:okhttp:3.8.1")
+// https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp
+    implementation("com.squareup.okhttp3:okhttp:4.10.0-RC1")
+
     // https://mvnrepository.com/artifact/org.slf4j/slf4j-api
     implementation("org.slf4j:slf4j-api:2.0.0-alpha4")
 

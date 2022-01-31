@@ -12,7 +12,7 @@ class ServerStatusService(private val connectionBuilder: ConnectionBuilder) {
 
     fun getStatus(): List<ServerStatusInterface> {
         val result = connectionBuilder.makeRequest(Data.apiUrl + "/status", RestType.GET);
-        val jsonData: String = result.body()!!.string()
+        val jsonData: String = result.body!!.string()
 
         return RainbowWrapper.gson.fromJson(jsonData, Array<ServerStatusInterface>::class.java).toList()
     }
