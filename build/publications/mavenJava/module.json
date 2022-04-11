@@ -3,7 +3,7 @@
   "component": {
     "group": "it.necross",
     "module": "RainbowWrapper",
-    "version": "1.0.1-rc",
+    "version": "1.0.6-rc",
     "attributes": {
       "org.gradle.status": "release"
     }
@@ -36,13 +36,13 @@
       ],
       "files": [
         {
-          "name": "RainbowWrapper-1.0.1-rc.jar",
-          "url": "RainbowWrapper-1.0.1-rc.jar",
-          "size": 174422,
-          "sha512": "2eb5794a1052892c9e873e0a3b031c0749c9ae8f6f273732b05320d2c48b15cb6c25866b4542a91520fe5203e3d83eb10a36ba96cc8a226f43820c2829664b8d",
-          "sha256": "fbf48cef86b5f739fd0086e772a64f4bfd0ea35ac03ea482a69c140e6b08355d",
-          "sha1": "0507119723004ba15daf9e6c5b44e6bc6ab89ab5",
-          "md5": "65c4b04b303ca988c09c84cfe7f9774e"
+          "name": "RainbowWrapper-1.0.6-rc.jar",
+          "url": "RainbowWrapper-1.0.6-rc.jar",
+          "size": 175564,
+          "sha512": "38161133b4c35caaa4aac5f5cc0f7639d3e69c39d409a47d613cb04452b0e37f5996f91140d0ff8244d5509fc846f5386be7b9a1a818cd83f10534553a6dcb67",
+          "sha256": "86a9f384bd94c6563e607f912871691f26efb4ff60727ae1b587bc72ffa5a1d7",
+          "sha1": "bccabacc004eebe2696f0206baebcb82db99ea2b",
+          "md5": "0e9fe0705bb5d831e191a7fc1bf4419e"
         }
       ]
     },
@@ -69,7 +69,7 @@
           "group": "com.squareup.okhttp3",
           "module": "okhttp",
           "version": {
-            "requires": "3.12.12"
+            "requires": "4.10.0-RC1"
           }
         },
         {
@@ -110,13 +110,13 @@
       ],
       "files": [
         {
-          "name": "RainbowWrapper-1.0.1-rc.jar",
-          "url": "RainbowWrapper-1.0.1-rc.jar",
-          "size": 174422,
-          "sha512": "2eb5794a1052892c9e873e0a3b031c0749c9ae8f6f273732b05320d2c48b15cb6c25866b4542a91520fe5203e3d83eb10a36ba96cc8a226f43820c2829664b8d",
-          "sha256": "fbf48cef86b5f739fd0086e772a64f4bfd0ea35ac03ea482a69c140e6b08355d",
-          "sha1": "0507119723004ba15daf9e6c5b44e6bc6ab89ab5",
-          "md5": "65c4b04b303ca988c09c84cfe7f9774e"
+          "name": "RainbowWrapper-1.0.6-rc.jar",
+          "url": "RainbowWrapper-1.0.6-rc.jar",
+          "size": 175564,
+          "sha512": "38161133b4c35caaa4aac5f5cc0f7639d3e69c39d409a47d613cb04452b0e37f5996f91140d0ff8244d5509fc846f5386be7b9a1a818cd83f10534553a6dcb67",
+          "sha256": "86a9f384bd94c6563e607f912871691f26efb4ff60727ae1b587bc72ffa5a1d7",
+          "sha1": "bccabacc004eebe2696f0206baebcb82db99ea2b",
+          "md5": "0e9fe0705bb5d831e191a7fc1bf4419e"
         }
       ]
     },
@@ -130,13 +130,13 @@
       },
       "files": [
         {
-          "name": "RainbowWrapper-1.0.1-rc-sources.jar",
-          "url": "RainbowWrapper-1.0.1-rc-sources.jar",
-          "size": 33810,
-          "sha512": "c38d3e28c70eb9127c4a1634f351813ffad23a2d963e25856ab1a71d7b7d923765113d779bc858ad42994ca5e1884e6e2c5015b322ae70ccc1f7c2842f7103b6",
-          "sha256": "28dd108cd2787d6fcea7fe0d245a27f555444c133b14bd2f0da5cece8ced46f5",
-          "sha1": "2f3c02a5c939e25fd93ecacc16bb222b4f483f65",
-          "md5": "d6fd463c3dfe7aedd6f96f7abc970a43"
+          "name": "RainbowWrapper-1.0.6-rc-sources.jar",
+          "url": "RainbowWrapper-1.0.6-rc-sources.jar",
+          "size": 34002,
+          "sha512": "71c95b39dec4d1c86f3a9a99777675e4aa9e130f6ddd3fcef75c1098445f648d4adc92abe2291797a2dc20260b0e8ef9cf4bcf276013794c62246e7e451a6011",
+          "sha256": "4efb59037e563c32e6c1ba3d8f120825c3c17b6bee41666cfaf3f2c6f6bb031d",
+          "sha1": "f6d30a206828415d59fac9baa56fe3006ef82efa",
+          "md5": "c04397d68cc2d9c7c5fac76efa34b2c5"
         }
       ]
     }

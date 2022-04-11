@@ -15,4 +15,11 @@ class RankService(private val connectionBuilder: ConnectionBuilder) {
 
         return RainbowWrapper.gson.fromJson(jsonData, IRank::class.java)
     }
+
+    fun getRanksByUserID(platform: GamePlatform, userID: String): IRank{
+        val result = connectionBuilder.makeRequest("${Data.apiUrl}/${platform.identifier}/rank/id/$userID", RestType.GET)
+        val jsonData: String = result.body!!.string()
+
+        return RainbowWrapper.gson.fromJson(jsonData, IRank::class.java)
+    }
 }
