@@ -33,7 +33,7 @@ class ConnectionBuilder(private val apiKey: String) {
             .url(url)
             .method(restType.name, generateRequestBody(restBody))
             .addHeader("X-API-KEY", this.apiKey)
-            .build();
+            .build()
 
         return httpClient.newCall(request).execute()
     }
